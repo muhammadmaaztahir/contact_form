@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: rgb(194, 194, 194);
+}
+
+.container {
+    background-color: rgb(255, 255, 255);
+    padding: 50px 50px;
+    width: 60%;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 4px 6px 30px rgba(0, 0, 0, 0.157);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+form {
+    display: flex;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.left>h1 {
+    color: #01B29Fff;
+    font-size: 50px;
+    font-family: 'Hind Siliguri';
+    font-weight: 600;
+    line-height: 45px;
+}
+
+.left>p {
+    color: #8a8a8a;
+    font-size: 20px;
+    font-family: poppins;
+    font-weight: 600;
+}
+
+.left {
+    width: 50%;
+}
+
+.inputFields {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.inputFields>input {
+    height: 6vh;
+    background-color: #efefef;
+    border: none;
+    outline: none;
+    margin: 12px 0;
+    padding: 0 20px;
+    font-family: poppins;
+    font-size: 18px;
+    font-weight: 600;
+    color: #515151;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.errorBorder {
+    border: 2px solid red !important;
+    box-sizing: border-box;
+}
+
+.successBorder {
+    border: 2px solid rgb(53, 176, 0) !important;
+    box-sizing: border-box;
+}
+
+.inputFields>textarea {
+    background-color: #efefef;
+    border: none;
+    outline: none;
+    margin: 12px 0;
+    padding: 20px;
+    font-family: poppins;
+    font-size: 18px;
+    font-weight: 600;
+    color: #515151;
+    resize: none;
+    max-width: 100%;
+    border-radius: 3px;
+}
+
+.inputFields>input::placeholder,
+.inputFields>textarea::placeholder {
+    color: #a3a3a3;
+}
+
+.inputFields>input:focus,
+.inputFields>textarea:focus {
+    border: 2px solid rgba(99, 99, 99, 0.289);
+}
+
+#submitButton {
+    padding: 15px;
+    font-size: 28px;
+    color: #ffffff;
+    background-color: #01B29Fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: auto;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#submitButton:hover {
+    background-color: #017e75ff;
+}
+
+.right {
+    width: 60%;
+}
+
+.image {
+    background-image: url('./Images/5124556.jpg');
+    height: 60%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-size: contain;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.contactDetails>div {
+    width: 60%;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    margin: auto;
+    align-items: baseline;
+}
+
+.underContactDetails {
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-family: poppins;
+    font-weight: 600;
+    color: #232323;
+}
+
+.errorMessage {
+    color: red;
+    text-transform: uppercase;
+    font-family: poppins;
+    font-weight: 700;
+    font-size: 12px;
+    display: none;
+}
+
+.showErrorMsg {
+    display: block;
+}
+
+/* for responsiveness */
+@media (max-width: 1440px) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 85%;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-color: white;
+    }
+
+    .container {
+        width: 80%;
+        box-shadow: none;
+    }
+
+    .image {
+        background-image: url(./Images/5124556.jpg);
+        height: 50vh;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: 50% 100%;
+        background-size: contain;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+    }
+
+    form {
+        flex-direction: column-reverse;
+        gap: 80px;
+    }
+
+    .left>h1,
+    .left>p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 425px) {
+    .contactDetails>div {
+        width: 100%;
+    }
+
+    .image {
+        height: 40vh;
+    }
+
+    .container {
+        padding: 30px 10px;
+        width: 85%;
+    }
+
+    .left>h1 {
+        font-size: 40px;
+    }
+
+    .left>p {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        width: 90%;
+    }
+
+    .inputFields>input,
+    .inputFields>textarea {
+        font-size: 16px;
+    }
+
+    .underContactDetails {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 320px) {
+    .container {
+        width: 90%;
+    }
+
+    .image {
+        height: 35vh;
+    }
+
+    .underContactDetails {
+        font-size: 20px;
+    }
+
+    .left>p {
+        font-size: 16px;
+    }
+
+    .inputFields>input,
+    .inputFields>textarea {
+        font-size: 14px;
+    }
+}

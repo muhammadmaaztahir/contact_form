@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&family=Dancing+Script:wght@700&family=Hind+Siliguri:wght@300;400;500;600;700&family=Open+Sans:wght@700&display=swap"
+        rel="stylesheet">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <form action="submit">
+            <div class="left">
+                <h1>Get In Touch</h1>
+                <p>We are here for you! How can we help?</p>
+                <div class="mainForm">
+                    <div class="inputFields">
+                        <p class="errorMessage showErrorMsg"></p>
+                        <input type="text" id="userName" name="userName" maxlength="25" placeholder="Enter your name"
+                            autocomplete="off">
+                    </div>
+
+                    <div class="inputFields">
+                        <p class="errorMessage"></p>
+                        <input type="text" id="email" name="email" placeholder="Enter your email"
+                            autocomplete="off">
+                    </div>
+
+                    <div class="inputFields">
+                        <p class="errorMessage"></p>
+                        <input type="number" id="phoneNumber" name="phoneNumber"
+                            placeholder="Enter your Phone Number" autocomplete="off">
+                    </div>
+
+                    <div class="inputFields">
+                        <p class="errorMessage"></p>
+                        <textarea name="comment" id="comment" cols="0" rows="7" placeholder="Your thoughts..."></textarea autocomplete="off">
+                </div>
+            </div>
+                <input type="submit" name="submit" id="submitButton">
+           
+            </div>
+            <div class="right">
+                <div class="image"></div>
+                <div class="contactDetails">
+                    <div>
+                        <div class="underContactDetails"><img src="./Images/location-pin-svgrepo-com.svg" width="30px"
+                                alt="">ABC Road, Karachi</div>
+                        <div class="underContactDetails"><img src="./Images/telephone-svgrepo-com.svg" width="30px"
+                                alt="">+92 123456789</div>
+                        <div class="underContactDetails"><img src="./Images/mail-svgrepo-com.svg" width="30px"
+                                alt="">dummy@gmail.com</div>
+                    </div>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
